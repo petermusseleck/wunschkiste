@@ -1,0 +1,13 @@
+<% @title = "Liste" %>
+<h2>Die W&uuml;nsche von <%= $fulfiluser.first_name %></h2>
+<ul>
+<% @requests.each do |request|%>
+  <li>
+    <p><%= request.title %></p>
+    <div id="singleButton"><button type="button" class="myGreenButton"><%= link_to "ansehen", show_request_path(request) %></button></div>
+  </li>
+<% end %>
+</ul>  
+<br>
+<button type="button" class="myBlueButton"><%= back_to_select %></button>
+<br>

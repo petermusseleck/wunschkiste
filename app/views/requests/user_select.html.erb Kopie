@@ -1,0 +1,13 @@
+
+
+  <%= form_for :show_user_requests do %>
+    <div class="field">
+      <%= collection_select(:requests, :user_id, User.all, :id, :full_name) %>
+    </div>
+
+
+
+    <%= puts ">>> #{params[:request_id]}" %>
+    <p><%= submit_tag "Wünsche ansehen" %></p>
+    <% end %>
+  

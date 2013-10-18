@@ -1,0 +1,34 @@
+<h1>Gruppenverwaltung</h1>
+
+<%= link_to "Neue Gruppe anlegen", new_group_path %>
+<br />
+
+<p>
+Meine Gruppen:
+</p>
+
+<% @groups.each do |group|%>
+  <li>
+    <h2><%= group.name %></h2>
+    <div id="buttons">
+    <button type="button" class="myGoldButton">
+      <%= link_to "Gruppe umbenennen", edit_group_path(group) %>
+    </button>
+    <button type="button" class="myGoldButton">
+      <%= link_to "Mitglieder bearbeiten", editmember_path(group) %>
+    </button>
+    </div>
+    <% group.users.each do |user|%>
+      <ul>
+      <%= user.first_name %> <%= user.last_name %>
+      </ul>
+    <% end %>
+   
+  </li>
+<% end %>
+
+<button type="button" class="myGreenButton"><%= link_to "Neue Gruppe", new_group_path %></button>
+<br>
+<button type="button" class="myBlueButton"><%= back_to_select %></button>
+<br>
+

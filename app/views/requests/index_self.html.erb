@@ -1,0 +1,25 @@
+<% @title = "Liste" %>
+<h2>Eigene W&uuml;sche</h2>
+<ul>
+<% @requests.each do |request|%>
+  <li>
+    <p><%= request.title %></p>
+    <div id="buttons"><button type="button" class="myGreenButton">
+      <%= link_to "Bearbeiten", edit_request_path(request) %>
+    </button>
+    <button type="button" class="myRedButton">
+      <%= link_to "löschen", request,
+      confirm: 'Wollen Sie den Wunsch wirklich löschen? Es könnte ja immerhin sein, dass ihn schon jemand erfüllen möchte..!',
+      method: :delete %>
+    </button>
+    </div>
+  </li>
+<% end %>
+</ul>  
+<br>
+<p>
+  <button type="button" class="myGreenButton"><%= link_to "Neuer Wunsch", new_request_path %></button>
+</p>
+<br>
+<button type="button" class="myBlueButton"><%= back_to_select %></button>
+<br>

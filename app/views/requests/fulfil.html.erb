@@ -1,0 +1,21 @@
+<% @title = "Liste" %>
+<h2>Diese W&uuml;nsche m&ouml;chtest du erf&uuml;llen:</h2>
+<ul>
+<% @requests.each do |request|%>
+  <li>
+    <% tempuser = User.find(request.user_id) %>
+    F&uuml;r: <%= tempuser.full_name %>
+    <h3><%= request.title %></h3>
+    <%= request.description %><br />
+    <%= request.url %><br />
+    <%= request.shop %><br />
+
+    <button type="button" class="myGoldButton"><%= link_to "Wunsch wieder freigeben", release_path(request) %></button>
+    <br />
+  </li>
+<% end %>
+</ul>  
+<br>
+
+<button type="button" class="myBlueButton"><%= back_to_select %></button>
+<br>

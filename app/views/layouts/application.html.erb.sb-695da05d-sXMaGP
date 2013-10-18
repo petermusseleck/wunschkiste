@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wunschkiste</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Die Gro&szlig;e Wunschkiste</h1>
+    </div>
+    <div id="content">
+      <% if flash[:notice] %>
+      <p id="notice">
+        <%= flash[:notice] %>
+      </p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p id="alert">
+          <%= flash[:alert] %>
+        </p>
+        <% end %>
+      <%= yield %>
+    </div>
+    <div id="footer">
+      &copy; 2013 by BDP | 
+      <% if user_signed_in? %>
+        <%= @current_user.first_name %> <%= link_to "abmelden", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "login", login_path %>
+      <% end %>
+    </div>
+  </div>
+</body>
+
+</html>

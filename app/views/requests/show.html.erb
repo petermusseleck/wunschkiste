@@ -1,0 +1,26 @@
+<% @title = "Details" %>
+<h1><%= @request.title %></h1>
+
+<p>
+  <b>Beschreibung:</b>
+  <%= @request.description %>
+</p><p>
+  <b>Shop:</b>
+  <%= @request.shop %>
+</p><p>
+  <b>Link:</b>
+  <a href=<%= @request.url %>><%= @request.url %></a>
+</p>
+<br />
+<%= form_for(@request) do |f| %>
+  <div class="field">
+    <b>Ich erf&uuml;lle diesen Wunsch!</b>
+    <%= f.check_box :taken %>
+  </div>
+  <%= f.hidden_field :fulfilid, :value => @current_user.id  %>
+  <p>
+    <%= f.submit "Sichern" %>
+  </p>
+<% end %>
+<br>
+<button type="button" class="myBlueButton"><%= back_to_select %></button>

@@ -1,0 +1,11 @@
+<h2>Administration</h2>
+<p>
+  <%= link_to "Benutzerkonto erstellen", new_user_path %>
+</p><br />
+<p>
+  <%= link_to "Benutzerkonto löschen", userindex_path %>
+</p><br />
+<p>
+  <%= link_to "Gruppenverwaltung", groupadmin_path %>
+</p><br />
+<p><%= back_to_select %></p>

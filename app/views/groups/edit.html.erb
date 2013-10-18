@@ -1,0 +1,15 @@
+<% @title = "bearbeiten" %>
+<h1>Gruppe bearbeiten</h1>
+
+
+<%= form_for(@group) do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "Speichern" %>
+  </p>
+  
+<% end %>
+<br>
+<p><%= link_to "Zurück zur Gruppenliste", groupadmin_path %></p>

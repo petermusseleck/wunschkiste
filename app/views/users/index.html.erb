@@ -1,0 +1,12 @@
+<h2>Benutzer l&ouml;schen</h2>
+<ul>
+<% @users.each do |user|%>
+  <li>
+    <%= user.first_name %> <%= user.last_name %>
+    <div id="singleButton"><button type="button" class="myRedButton"><%= link_to "löschen", delete_user_path(user) %></button></div>
+  </li>
+<% end %>
+</ul>  
+<br>
+<button type="button" class="myBlueButton"><%= back_to_admin %></button>
+<br>

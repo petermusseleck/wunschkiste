@@ -1,0 +1,332 @@
+// Place all the styles related to the wuensche controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blau: #006999;
+$gruen: #008414;
+$rot: #990A0C;
+$dunkelgruen: #006930;
+
+* {
+	margin: 0;
+}
+
+body {
+	background-color: #ddd;
+}
+#container {
+	width: 500px;
+	margin: 15px auto;
+    
+    a {
+	color: white;
+	text-decoration: none;
+	}
+}
+#header {
+	background-color: $dunkelgruen;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+}
+#content {
+	border: 2px solid $dunkelgruen;
+	padding: 10px;
+	background-color: #fff;
+	min-height: 200px;
+	font-size: 18px;
+	
+	h2 {
+		font-size: 1.1em;
+		margin-bottom: 0.5em;
+	}
+	
+	h1 {
+	margin-bottom: 0.5em;
+	}
+	
+	p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+    }
+    ul {
+	list-style-type: none;
+	padding-left: 0;
+    }
+    li {
+	margin-bottom: 15px;
+	background-color: #f2f2f2;
+	padding: 10px;
+	float: left;
+	width: 450px;
+	list-style-type: none;
+	
+		h3 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		}
+		
+		h2 {
+		width: 220px;
+		}
+		
+		ul {
+		width: 220px;
+		}
+		
+		p {
+		width: 220px;
+		height: 100%;
+		line-height: 20px;
+		float: left;
+		vertical-align: middle;
+		}
+    }
+
+}
+#notice {
+	border: 1px solid $dunkelgruen;
+	color: $dunkelgruen;
+	background-color: #D8FFBB;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+#alert {
+	border: 1px solid $rot;
+	color: $rot;
+	background-color: #FFA894;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+label {
+	display: block
+}
+input {
+	margin: 0.5em 0;
+}
+input[type="submit"] {
+	margin-top: 2em;
+	width: 100px;
+    height: 20px;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px/20px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+	clear: right;
+
+}
+.field_with_errors {
+	background-color: red;
+}
+#requests {
+	margin-top: 10px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+#selectuser {
+	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+	width: 100%;
+}
+#fulfil {
+	margin-top: 10px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+#admin {
+	margin-top: 10px;
+	background-color: #006930;
+	text-align: center;
+}
+#footer a {
+	color: #026930;
+}
+#abstand {
+	width: 100%;
+	height: 50px;
+	display: block;
+}
+.sidetext {
+	float: right;
+	width: 200px;
+	font-size: 14px;
+	padding-top: 30px;
+	height: 110px;
+	padding-bottom: 10px;
+	vertical-align: middle;
+	text-align: left;
+}
+#buttons {
+	float: right;
+	width: 210px;
+	line-height: 100%;
+	text-align: center;
+}
+#singleButton {
+	float: right;
+	width: 105px;
+	line-height: 100%;
+	clear: none;
+}
+.myGreenButton {
+    width: 100px;
+    height: 20px;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px/20px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#025727 0%,#1f7346 50%,#025727 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+	clear: right;
+}
+.myRedButton {
+    width: 100px;
+    height: 21px;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px/21px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#570303 0%,#851111 8%,#851111 90%,#570303 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#570303 0%,#851111 8%,#851111 90%,#570303 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#570303 0%,#851111 8%,#851111 90%,#570303 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#570303 0%,#851111 8%,#851111 90%,#570303 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+}
+.deleteButton {
+	background: url(file://localhost/Users/mupe/Documents/rails_projekte/wunschkiste/app/assets/images/btn_delete.gif) fixed;
+}
+.myBlueButton {
+    width: 200px;
+    height: 21px;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px/21px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#031157 0%,#071c85 8%,#071c85 90%,#031157 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#031157 0%,#071c85 8%,#071c85 90%,#031157 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#031157 0%,#071c85 8%,#071c85 90%,#031157 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#031157 0%,#071c85 8%,#071c85 90%,#031157 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    margin-top: 10px;
+	margin-bottom: 5px;
+}
+.myGoldButton {
+    width: 200px;
+    height: 21px;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px/21px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 8%,#a15906 90%,#734002 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 8%,#a15906 90%,#734002 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 8%,#a15906 90%,#734002 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 8%,#a15906 90%,#734002 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.mySelectButton {
+    width: 230px;
+    height: 150px;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px/150px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+	position: relative;
+	float: left;
+}
+.mySelectField {
+    width: 230px;
+    height: 140px;
+    padding: 10px 0 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgba(255,255,255,1);
+    font: normal 13px "Lucida Grande";
+    border: 1px solid rgba(154,154,154,1);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-image: rgba(2,87,39,1);
+    background-image: -webkit-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    background-image: -moz-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    background-image: linear-gradient(top, #fffefe 0%,#734002 0%,#a15906 5%,#cc740e 50%,#734002 100%,#eeeeee 100%);
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.1) 0px 1px 0px 0px, inset rgba(255,255,255,0.4) 0px 1px 2px 0px;
+	position: relative;
+	float: left;
+}

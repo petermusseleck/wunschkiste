@@ -1,0 +1,22 @@
+<% @title = "Details" %>
+<h1>Details zum Wunsch</h1>
+<p>
+  <b>Titel:</b>
+  <%= @request.title %>
+</p>
+<p>
+  <b>Beschreibung:</b>
+  <%= @request.description %>
+</p><p>
+  <b>Shop:</b>
+  <%= @request.shop %>
+</p><p>
+  <b>Link:</b>
+  <a href=<%= @request.url %>><%= @request.url %></a>
+</p>
+<p>
+  <b>Ich erf&uuml;lle diesen Wunsch!</b>
+  <%= @request.taken %>
+</p>
+<br>
+<p><%= back_to_index_self %></p>

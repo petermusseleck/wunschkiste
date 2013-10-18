@@ -1,0 +1,28 @@
+<% @title = "bearbeiten" %>
+<h1>Gruppe bearbeiten</h1>
+
+
+  <h2>Mitglieder:</h2	>
+<% @group.users.each do |user| %>
+  <li>
+    <%= user.first_name %>
+    <%= user.last_name %>
+    (<%= user.email %>)
+    <div id="singleButton"><button type="button" class="myRedButton"><%= link_to "löschen", remove_member_path(user.id) %></button></div> 
+  </li>
+<% end %>
+
+<div id="abstand">  </div>
+<h2>Mitglied zur Gruppe hinzufügen</h2>
+<%= form_tag member_update_path do %>
+  <div class="field">
+    <%= label_tag "Nach Email-Adresse suchen:" %>
+    <%= text_field_tag :email %>
+  </div>
+<%= submit_tag "Add Member" %>
+<% end %>
+
+
+
+<br>
+<button type="button" class="myBlueButton"><%= link_to "Zurück zur Gruppenliste", groupadmin_path %></button>

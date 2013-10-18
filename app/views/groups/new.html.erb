@@ -1,0 +1,19 @@
+<h2>Neue Gruppe anlegen</h2>
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <ul>
+    <% @group.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <p>
+    <%#= f.label :name #%>
+    Bezeichnung:
+    <%= f.text_field :name %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>
+
+<button type="button" class="myBlueButton"><%= link_to "Zurück zur Liste", groupadmin_path %></button>

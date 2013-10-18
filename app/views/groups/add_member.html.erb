@@ -1,0 +1,10 @@
+<%= form_tag member_update_path do %>
+  <div class="field">
+    <%# @crowd = User.all #%>
+    <%# @crowd.delete @group.users #%>
+    <%#= collection_select(:useradd, :user_id, @crowd, :id, :full_name) #%>
+    <%#= label :user.email #%>
+    <%= text_field :members_user_id, :user_email %>
+  </div>
+  <p><%= submit_tag "Add User" %></p><br />
+<% end %>

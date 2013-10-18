@@ -1,0 +1,37 @@
+<% @title = "bearbeiten" %>
+<h1>Wunsch bearbeiten</h1>
+
+
+
+<%= form_for(@request) do |f| %>
+  <% if @request.errors.any? %>
+    <ul>
+    <% @request.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <p>
+    Titel:<br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    Beschreibung:<br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    Gefunden bei:<br />
+    <%= f.text_field :shop %>
+  </p>
+  <p>
+    Link:<br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit "Speichern" %>
+  </p>
+  
+ 
+<% end %>
+<br>
+<button type="button" class="myBlueButton"><%= back_to_index_self %></button>

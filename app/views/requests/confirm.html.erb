@@ -1,0 +1,30 @@
+<% @title = "Details" %>
+<h1>Details zum Wunsch</h1>
+<% $confirm = true %>
+<p>
+  <b>Titel:</b>
+  <%= @request.title %>
+</p>
+<p>
+  <b>Beschreibung:</b>
+  <%= @request.description %>
+</p><p>
+  <b>Shop:</b>
+  <%= @request.shop %>
+</p><p>
+  <b>Link:</b>
+  <a href=<%= @request.url %>><%= @request.url %></a>
+</p>
+<%= form_for(@request) do |f| %>
+  <div class="field"> <br />
+    <b>Ich gebe diesen Wunsch wieder frei!</b>
+    <%= f.text_field :title %>
+    <%= f.text_field :taken, :value => nil  %>
+  </div>
+  <%= f.text_field :fulfilid, :value => nil  %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<br>
+<p><%= back_to_select %></p>

@@ -1,0 +1,14 @@
+UserMailer#request_list
+
+<%= @greeting %>, 
+
+Hier ist die Liste der Wünsche, die du erfüllen möchtest:
+
+<% @requests.each do |request|%>
+  <li>
+    <p><%= request.title %></p>
+    <p><%= request.description %></p>
+    <p><%= request.shop %></p>
+    <p><%= request.url %></p><br />
+  </li>
+<% end %>

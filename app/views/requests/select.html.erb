@@ -1,0 +1,41 @@
+  <div id="requests">
+    <button type="button" class="mySelectButton"><%= link_to "Meine Wünsche", own_requests_path %></button>
+    <div class="sidetext">
+      Hier kommst du zu deiner persönlichen Wunschkiste. Du kannst Wünsche hinzufügen oder löschen. Welche Wünsche erfüllt werden sollen, siehst du aber nicht.
+    </div>
+  </div>
+  <br />
+  <div id="selectuser">
+    <div class="mySelectField">
+  <%= form_tag select_path do %>
+    <div class="field">
+      <p>Wessen W&uuml;nsche m&ouml;chtest du dir ansehen? </p><br />
+
+      <%= collection_select(:userchangeid, :user_id, @crowd, :id, :full_name) %>
+    </div>
+    <p><%= submit_tag "Los!" %></p><br />
+    </div>
+    <div class="sidetext">
+      Wähle denjenigen aus, dessen Wünsche du dir ansehen möchtest und klicke auf "Los!". Dann such dir einen Wunsch aus und reserviere ihn, um ihn zu erfüllen.
+    </div>
+  </div>
+  <div id="fulfil">
+  <button type="button" class="mySelectButton"><%= link_to "Wünsche, die ich erfüllen möchte", fulfil_path %></button>
+  <div class="sidetext">
+    Hier kannst du dir eine Liste aller Wünsche ansehen, die du dir reserviert hast um sie zu erfüllen. Du kannst die Wünsche auch wieder freigeben, falls du dich umentschieden hast.
+  </div>
+  </div>
+  <div id="admin">
+    <% if @current_user.usertype == "Groupadmin" %>
+      <%= link_to "Gruppenverwaltung", groupadmin_path %>
+    <% end %>
+  </p>
+  <p>
+    <% if @current_user.usertype == "Admin" %>
+
+
+      <%= link_to "Administration", admin_path %>
+    <% end %>
+  </div>
+<% end %>
+  

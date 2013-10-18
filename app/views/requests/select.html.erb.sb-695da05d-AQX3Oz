@@ -1,0 +1,32 @@
+  <p>
+  <%= link_to "Meine Wünsche", own_requests_path %>
+  </p><br />
+  <p>
+  <%= form_tag select_path do %>
+    <div class="field">
+      <p>Wessen W&uuml;nsche m&ouml;chtest du dir ansehen? </p><br />
+
+      <%= collection_select(:userchangeid, :user_id, @crowd, :id, :full_name) %>
+    </div>
+
+
+    <p><%= submit_tag "Wünsche ansehen" %></p><br />
+  <p>
+  <%= link_to "Wünsche, die ich erfüllen möchte", fulfil_path %>
+  </p>
+  <p>
+  Activeuser: <%= @activeuser %>
+    <% if @current_user.usertype == "Groupadmin" %>
+      <%= link_to "Gruppenverwaltung", groupadmin_path %>
+    <% end %>
+  </p>
+  <p>
+    Administration:<br />
+    <% if @current_user.usertype == "Admin" %>
+
+
+      <%= link_to "Administration", admin_path %>
+    <% end %>
+  </p>
+<% end %>
+  
